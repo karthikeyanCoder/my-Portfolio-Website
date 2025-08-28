@@ -8,5 +8,5 @@ export default defineConfig({
     tailwindcss(),
   
   ],
-  base: "/karthi-portfolio/"
+  base: "/my-Portfolio-Website/"
 });
