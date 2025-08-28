@@ -35,7 +35,7 @@ const Hero = () => {
           <a href="https://github.com/karthikeyanCoder" target="_blank" rel="noopener noreferrer" className="btn">
             GitHub
           </a>
-          <a href="https://karthikeyan-portfolio.vercel.app" target="_blank" rel="noopener noreferrer" className="btn">
+          <a href="https://karthikeyancoder.github.io/my-Portfolio-Website/" target="_blank" rel="noopener noreferrer" className="btn">
             Portfolio
           </a>
         </div>
