@@ -1,51 +1,74 @@
 import React from 'react';
+import fullstackImg from '../assets/fullstack.png';
+import pythonImg from '../assets/python.png';
+
+const projects = [
+    {
+        title: 'SaaS Dashboard',
+        desc: 'A comprehensive admin dashboard with real-time analytics, user management, and interactive data visualizations built with modern web technologies.',
+        tags: ['React', 'Node.js', 'MongoDB', 'Chart.js'],
+        image: fullstackImg,
+    },
+    {
+        title: 'Python Automation Tool',
+        desc: 'An automation platform that streamlines repetitive tasks using Python scripts with a clean web interface for configuration and monitoring.',
+        tags: ['Python', 'Flask', 'REST API', 'Automation'],
+        image: pythonImg,
+    },
+    {
+        title: 'E-Commerce Platform',
+        desc: 'Full-stack e-commerce solution with secure payments, product catalog, shopping cart, and admin panel for order management.',
+        tags: ['React', 'Express', 'MongoDB', 'Stripe'],
+        image: null,
+    },
+];
 
 const Projects = () => {
-  const projects = [
-    {
-      title: 'AI Chatbot for Pregnancy Risk Analysis (2023 – Personal Project)',
-      description: [
-        'Developed an intelligent AI chatbot using n8n for workflow automation, React.js for the frontend interface, and Node.js for backend logic, enabling real-time pregnancy risk assessments based on user inputs.',
-        'Integrated machine learning models to analyze health data and provide personalized risk predictions, improving accuracy by 30% through iterative testing and optimization.',
-        'Deployed on a scalable cloud environment, incorporating RESTful APIs for seamless data exchange; project enhanced user accessibility for healthcare applications.',
-      ],
-      technologies: 'n8n, React.js, Node.js, MongoDB, openAI, AI Agent',
-      github: '[https://github.com/karthikeyanCoder]',
-    },
-    {
-      title: 'Text-to-Speech (TTS) Content Converter (2023 – Personal Project)',
-      description: [
-        'Built a multilingual TTS application that converts text content into high-quality audio in any language, with specific support for Tamil and English, using Node.js for backend processing and API integrations.',
-        'Implemented voice synthesis features with customizable accents and speeds, reducing conversion time by 40% through efficient algorithms and third-party TTS libraries.',
-        'Designed a user-friendly interface with React.js, ensuring responsive design across devices; project supported educational and accessibility use cases, handling over 1,000 conversions in testing.',
-      ],
-      technologies: 'Node.js, React.js, TTS APIs, JavaScript, Multilingual Support.',
-      github: '[https://github.com/karthikeyanCoder]', 
-    },
-  ];
+    return (
+        <section className="py-20 bg-white" id="projects">
+            <div className="max-w-7xl mx-auto px-6">
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Portfolio</h2>
+                    <div className="w-16 h-1 bg-purple-600 mx-auto rounded-full"></div>
+                </div>
 
-  return (
-    <section id="projects" className="card mb-10">
-      <h2 className="text-3xl gradient-text mb-6 text-center">Projects</h2>
-      {projects.map((project, index) => (
-        <div key={index} className="p-4 mb-6 border-b border-white/5 last:border-b-0">
-          <h3 className="text-xl font-semibold text-[hsl(var(--accent-blue))]">{project.title}</h3>
-          <ul className="list-disc pl-5 mt-2 text-[hsl(var(--text-muted))] text-sm">
-            {project.description.map((desc, i) => (
-              <li key={i}>{desc}</li>
-            ))}
-          </ul>
-          <p className="mt-2 text-sm"><strong>Technologies:</strong> {project.technologies}</p>
-          <p className="text-sm">
-            <strong>GitHub:</strong>{" "}
-            <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-[hsl(var(--accent-blue))] hover:underline">
-              {project.github}
-            </a>
-          </p>
-        </div>
-      ))}
-    </section>
-  );
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {projects.map((project, idx) => (
+                        <div key={idx} className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                            <div className="h-48 bg-purple-50 overflow-hidden relative">
+                                {project.image ? (
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    />
+                                ) : (
+                                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-100 to-pink-100 text-5xl">
+                                        🛒
+                                    </div>
+                                )}
+                                <div className="absolute inset-0 bg-purple-900/0 group-hover:bg-purple-900/10 transition-colors duration-300"></div>
+                            </div>
+                            <div className="p-6">
+                                <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
+                                <p className="text-gray-600 mb-6 leading-relaxed line-clamp-3">{project.desc}</p>
+                                <div className="flex flex-wrap gap-2">
+                                    {project.tags.map((tag, i) => (
+                                        <span
+                                            key={i}
+                                            className="px-3 py-1 bg-purple-50 text-purple-600 text-xs font-semibold rounded-full border border-purple-100"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
 };
 
 export default Projects;
