@@ -1,26 +1,47 @@
 import React from 'react';
-import fullstackImg from '../assets/fullstack.png';
-import pythonImg from '../assets/python.png';
+import fullstackImg from '../assets/fullstackImg.png';
+import hrDashboardImg from '../assets/hrDashboardImg.png';
 
 const projects = [
     {
-        title: 'SaaS Dashboard',
-        desc: 'A comprehensive admin dashboard with real-time analytics, user management, and interactive data visualizations built with modern web technologies.',
-        tags: ['React', 'Node.js', 'MongoDB', 'Chart.js'],
+        title: 'AI-Based E-Commerce Recommendation System',
+        desc: 'Designed and developed a modular, scalable e-commerce system with AI-powered recommendation engines, real-time analytics dashboards, and secure role-based access control. Implemented user behavior tracking, purchase pattern analysis, and product similarity models to deliver personalized experiences while maintaining high performance and data integrity.',
+        tags: [
+            'React',
+            'Node.js',
+            'Express.js',
+            'MongoDB',
+            'AI / Recommendation Engine',
+            'Behavioral Analytics',
+            'RBAC',
+            'JWT & Secure APIs',
+            'Chart.js',
+            'System Design',
+            'Microservice-Ready Architecture'
+        ],
         image: fullstackImg,
-    },
+    }
+    ,
     {
-        title: 'Python Automation Tool',
-        desc: 'An automation platform that streamlines repetitive tasks using Python scripts with a clean web interface for configuration and monitoring.',
-        tags: ['Python', 'Flask', 'REST API', 'Automation'],
-        image: pythonImg,
-    },
-    {
-        title: 'E-Commerce Platform',
-        desc: 'Full-stack e-commerce solution with secure payments, product catalog, shopping cart, and admin panel for order management.',
-        tags: ['React', 'Express', 'MongoDB', 'Stripe'],
-        image: null,
-    },
+        title: 'HR Timesheet & Workforce Management Dashboard',
+        desc: 'A scalable HR management system designed to track employee timesheets, attendance, and productivity with real-time analytics. The platform includes role-based access for HR, managers, and employees, automated timesheet approvals, payroll-ready reports, leave tracking, and performance insights through interactive dashboards. Built with a focus on data accuracy, security, and operational efficiency.',
+        tags: [
+            'React',
+            'Node.js',
+            'Express.js',
+            'MongoDB',
+            'HR Management System',
+            'Timesheet Automation',
+            'Attendance Tracking',
+            'Role-Based Access Control (RBAC)',
+            'JWT Authentication',
+            'Chart.js',
+            'Reporting & Analytics',
+            'Scalable Architecture'
+        ],
+        image: hrDashboardImg,
+    }
+
 ];
 
 const Projects = () => {
