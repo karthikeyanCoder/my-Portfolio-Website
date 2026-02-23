@@ -37,7 +37,7 @@ const Hero = () => {
                             download="Karthikeyan_FullStack_Resume.pdf"
                             className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-white text-purple-600 font-semibold border-2 border-purple-600 rounded-xl shadow-md hover:bg-purple-600 hover:text-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                         >
-                            Download CV
+                             CV
                         </a>
                     </div>
                 </div>
