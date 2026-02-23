@@ -4,7 +4,7 @@ const skillCategories = [
     title: 'Frontend',
     skills: [
       { name: 'Next.js', icon: '⏭️' },
-      { name: 'React', icon: '⚛️' },
+      { name: 'React,js', icon: '⚛️' },
       { name: 'TypeScript', icon: '🔷' },
       { name: 'JavaScript (ES6+)', icon: '🟨' },
       { name: 'HTML5', icon: '🌐' },
