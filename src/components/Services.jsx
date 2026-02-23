@@ -38,7 +38,7 @@ const Services = () => {
                             href="#contact"
                             className="inline-flex items-center gap-2 px-8 py-3 bg-red-500 text-white font-semibold rounded-xl hover:bg-red-600 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                         >
-                            👋 Say Hello!
+                            👋  Let's Connect!
                         </a>
                     </div>
 

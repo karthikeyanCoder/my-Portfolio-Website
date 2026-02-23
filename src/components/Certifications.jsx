@@ -13,18 +13,18 @@ const certs = [
         year: '2022',
         emoji: '🐍',
     },
-    {
-        title: 'MongoDB for Developers',
-        issuer: 'MongoDB University',
-        year: '2023',
-        emoji: '🍃',
-    },
-    {
-        title: 'React — The Complete Guide',
-        issuer: 'Udemy',
-        year: '2023',
-        emoji: '⚛️',
-    },
+    // {
+    //     title: 'MongoDB for Developers',
+    //     issuer: 'MongoDB University',
+    //     year: '2023',
+    //     emoji: '🍃',
+    // },
+    // {
+    //     title: 'React — The Complete Guide',
+    //     issuer: 'Udemy',
+    //     year: '2023',
+    //     emoji: '⚛️',
+    // },
 ];
 
 const Certifications = () => {

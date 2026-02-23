@@ -1,26 +1,9 @@
 import React, { useState } from 'react';
-import connectImg from '../assets/connect.png';
+
 
 const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        location: '',
-        subject: '',
-        message: '',
-    });
 
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const mailtoLink = `mailto:karthikeyanvjay70@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-            `Name: ${formData.name}\nEmail: ${formData.email}\nLocation: ${formData.location}n\n${formData.message}`
-        )}`;
-        window.open(mailtoLink, '_blank');
-    };
 
     return (
         <section className="py-20 bg-white" id="contact">
@@ -28,14 +11,7 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     {/* Left Side — Image & Info */}
                     <div className="flex flex-col gap-8">
-                        {/* Image Container */}
-                        <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-purple-50 rounded-3xl p-10 flex items-center justify-center relative overflow-hidden shadow-lg">
-                            <img
-                                src={connectImg}
-                                alt="Connect"
-                                className="w-full max-w-[300px] h-auto rounded-xl object-cover shadow-sm"
-                            />
-                        </div>
+                       
 
                         {/* Contact Info Items */}
                         <div className="flex flex-col gap-6">
@@ -49,7 +25,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <div className="text-sm text-gray-500 font-medium">Address:</div>
-                                    <div className="text-[0.95rem] font-bold text-gray-900">Chennai, Tamil Nadu, India</div>
+                                    <div className="text-[0.95rem] font-bold text-gray-900">Rasipuram, Namakkal District, Tamil Nadu, India</div>
                                 </div>
                             </div>
 
@@ -77,7 +53,7 @@ const Contact = () => {
                                     </svg>
                                 </div>
                                 <div>
-                                    <div className="text-sm text-gray-500 font-medium">Call Me Now:</div>
+                                    <div className="text-sm text-gray-500 font-medium">Mobile Number:</div>
                                     <div className="text-[0.95rem] font-bold text-gray-900">+91 9994615214</div>
                                 </div>
                             </div>
@@ -96,75 +72,7 @@ const Contact = () => {
                         </a>
                     </div>
 
-                    {/* Right Side — Form & Text */}
-                    <div className="bg-white">
-                        <h2 className="text-4xl font-extrabold text-gray-900 mb-4 leading-tight">
-                            Let's Build Something Great
-                        </h2>
-                        <p className="text-[0.95rem] text-gray-600 leading-relaxed mb-8">
-                            I'm eager to contribute to dynamic teams and innovative projects that challenge my problem-solving abilities. Whether you're looking for a dedicated developer or want to collaborate on exciting projects, I'd love to connect and explore opportunities together.
-                        </p>
-
-                        <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Name*"
-                                required
-                                value={formData.name}
-                                onChange={handleChange}
-                                className="w-full py-3.5 border-b-2 border-gray-100 outline-none text-[0.95rem] text-gray-900 bg-transparent focus:border-purple-500 transition-colors font-sans placeholder-gray-400"
-                            />
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Email*"
-                                required
-                                value={formData.email}
-                                onChange={handleChange}
-                                className="w-full py-3.5 border-b-2 border-gray-100 outline-none text-[0.95rem] text-gray-900 bg-transparent focus:border-purple-500 transition-colors font-sans placeholder-gray-400"
-                            />
-                            <input
-                                type="text"
-                                name="location"
-                                placeholder="Location*"
-                                value={formData.location}
-                                onChange={handleChange}
-                                className="w-full py-3.5 border-b-2 border-gray-100 outline-none text-[0.95rem] text-gray-900 bg-transparent focus:border-purple-500 transition-colors font-sans placeholder-gray-400"
-                            />
-
-                            <input
-                                type="text"
-                                name="subject"
-                                placeholder="Subject*"
-                                required
-                                value={formData.subject}
-                                onChange={handleChange}
-                                className="w-full py-3.5 border-b-2 border-gray-100 outline-none text-[0.95rem] text-gray-900 bg-transparent focus:border-purple-500 transition-colors font-sans placeholder-gray-400"
-                            />
-
-                            <textarea
-                                name="message"
-                                placeholder="Message*"
-                                required
-                                rows="4"
-                                value={formData.message}
-                                onChange={handleChange}
-                                className="w-full py-3.5 border-b-2 border-gray-100 outline-none text-[0.95rem] text-gray-900 bg-transparent focus:border-purple-500 transition-colors font-sans placeholder-gray-400 resize-y"
-                            />
-
-                            <button
-                                type="submit"
-                                className="inline-flex items-center gap-2 px-8 py-3.5 bg-purple-600 text-white font-bold text-[0.95rem] rounded-xl self-start transition-all duration-300 hover:bg-purple-700 hover:shadow-lg hover:-translate-y-1 shadow-purple-200"
-                            >
-                                Submit
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                    <line x1="22" y1="2" x2="11" y2="13" />
-                                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
-                                </svg>
-                            </button>
-                        </form>
-                    </div>
+          
                 </div>
             </div>
         </section>

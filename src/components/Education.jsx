@@ -1,5 +1,4 @@
 import React from 'react';
-import educationImg from '../assets/education.png';
 
 const educationData = [
     {
@@ -51,13 +50,13 @@ const Education = () => {
                     </div>
 
                     {/* Illustration Side */}
-                    <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-purple-50 rounded-3xl p-10 flex items-center justify-center min-h-[300px] relative overflow-hidden shadow-lg mx-auto w-full max-w-md md:max-w-full">
+                    {/* <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-purple-50 rounded-3xl p-10 flex items-center justify-center min-h-[300px] relative overflow-hidden shadow-lg mx-auto w-full max-w-md md:max-w-full">
                         <img
                             src={educationImg}
                             alt="Education"
                             className="w-full max-w-[300px] h-auto rounded-xl object-cover shadow-sm transform hover:scale-105 transition-transform duration-500"
                         />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

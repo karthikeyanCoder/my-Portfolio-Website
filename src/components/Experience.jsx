@@ -1,5 +1,5 @@
 import React from 'react';
-import expImg from '../assets/exp.png';
+
 
 const experiences = [
     {
@@ -26,15 +26,7 @@ const Experience = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div className="fade-in order-2 md:order-1 flex justify-center">
-                        <div className="p-8 bg-gradient-to-br from-purple-50 via-pink-50 to-purple-50 rounded-3xl shadow-lg relative overflow-hidden">
-                            <img
-                                src={expImg}
-                                alt="Experience"
-                                className="w-full max-w-[350px] h-auto rounded-xl object-cover shadow-sm mx-auto"
-                            />
-                        </div>
-                    </div>
+                   
 
                     <div className="order-1 md:order-2">
                         <div className="relative border-l-4 border-purple-200 ml-4 space-y-12">
